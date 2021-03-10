@@ -1,9 +1,14 @@
 function popUpRandomMole() {
-    let moleheads = document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)");
+    let str = `.wgs__mole-head:not(.wgs__mole-head--whacked)`;
+    let moleheads = document.querySelectorAll(str);
+    if (!moleheads.length) {
+        console.log("You have won!");
+        return;
+    }
+    let i = Math.floor(Math.random() * Math.floor(moleheads.length));
 
-    let i = Math.floor(Math.random() * Math.floor(7));
-    moleheads[i].classList.remove("wgs__mole-head--hidden");
     console.log(moleheads);
+    moleheads[i].classList.remove("wgs__mole-head--hidden");
     setTimeout(() => hideMole(moleheads[i]), 3000);
 }
 
