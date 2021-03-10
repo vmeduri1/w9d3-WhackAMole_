@@ -1,4 +1,11 @@
 /* Write your CSS here. */
+
+.pf {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .wgs {
     position: relative;
     height: 241px;
@@ -20,11 +27,9 @@
     position: absolute;
     height: 110px;
     width: 320px;
-    bottom: 0;
+    bottom: 0px;
 }
 
 .wgs__mole-head--hidden {
     margin-top: 241px;
-    /* overflow: hidden; */
 }
-
